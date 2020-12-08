@@ -14,14 +14,15 @@
 rate = [7, 5, 3, 3, 2]
 new_rate = int(input('Введите новое значение рейтинга (натуральное число): '))
 inserted = False
+print(f'Исходный список: {rate}')
 
 for i, el in enumerate(rate):
     if el < new_rate:
         rate.insert(i, new_rate)
+        print(f'Новое значение {new_rate} вставили на {i} позицию: {rate}')
         inserted = True
         break
 
 if not inserted:
     rate.append(new_rate)
-
-print(rate)
+    print(f'Новое значение {new_rate} добавили в конец списка: {rate}')
