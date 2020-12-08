@@ -10,3 +10,18 @@
 # Пользователь ввел число 8. Результат: 8, 7, 5, 3, 3, 2.
 # Пользователь ввел число 1. Результат: 7, 5, 3, 3, 2, 1.
 # Набор натуральных чисел можно задать непосредственно в коде, например, my_list = [7, 5, 3, 3, 2].
+
+rate = [7, 5, 3, 3, 2]
+new_rate = int(input('Введите новое значение рейтинга (натуральное число): '))
+inserted = False
+
+for i, el in enumerate(rate):
+    if el < new_rate:
+        rate.insert(i, new_rate)
+        inserted = True
+        break
+
+if not inserted:
+    rate.append(new_rate)
+
+print(rate)
